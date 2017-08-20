@@ -1,0 +1,31 @@
+{
+  "name": "sinon-mocha",
+  "version": "1.0.0",
+  "description": "Automatically verify and clean sinon sandboxes after each test",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "sinon",
+    "mocha",
+    "cleanup",
+    "afterEach",
+    "verify",
+    "restore",
+    "restoreAndVerify"
+  ],
+  "author": "Damian Kaczmarek <rush@tenfold.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mocha-finalize-each": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "sinon": "^3.2.1"
+  },
+  "peerDependencies": {
+    "sinon": "*"
+  }
+}
