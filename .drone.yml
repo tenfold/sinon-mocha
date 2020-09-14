@@ -14,5 +14,6 @@ steps:
     settings:
       token:
         from_secret: coveralls_token
+      debug: true
       files:
-      - /drone/src/.nyc_output/lcov.info
+      - .nyc_output/lcov.info
