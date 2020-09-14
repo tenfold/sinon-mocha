@@ -15,4 +15,4 @@ steps:
       token:
         from_secret: coveralls_token
       files:
-      - /drone/src/lcov.info
+      - /drone/src/.nyc_output/lcov.info
