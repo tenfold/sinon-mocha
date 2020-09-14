@@ -1,15 +1,19 @@
+---
+kind: pipeline
+type: docker
+name: default
 steps:
-- name: test
-  image: node:alpine
-  commands:
-  - npm install
-  - npm run test
-  - npm run coverage
+  - name: test
+    image: node:alpine
+    commands:
+    - npm install
+    - npm run test
+    - npm run coverage
 
-- name: coveralls
-  image: lizheming/drone-coveralls
-  settings:
-    token:
-      from_secret: coveralls_token
-    files:
-    - ./lcov.info
+  - name: coveralls
+    image: lizheming/drone-coveralls
+    settings:
+      token:
+        from_secret: coveralls_token
+      files:
+      - ./lcov.info
