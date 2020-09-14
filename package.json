@@ -4,8 +4,8 @@
   "description": "Automatically verify and clean sinon sandboxes after each test",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov > ./.nyc_output/lcov.info"
+    "test": "nyc mocha",
+    "coverage": "npm test && nyc report --reporter=text-lcov > ./.nyc_output/lcov.info"
   },
   "keywords": [
     "sinon",
