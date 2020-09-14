@@ -16,4 +16,4 @@ steps:
         from_secret: coveralls_token
       debug: true
       files:
-      - .nyc_output/lcov.info
+      - ./.nyc_output/lcov.info
