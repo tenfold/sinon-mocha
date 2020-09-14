@@ -14,6 +14,5 @@ steps:
     settings:
       token:
         from_secret: coveralls_token
-      debug: true
       files:
       - /drone/src/lcov.info
