@@ -3,7 +3,7 @@ const finalizeEach = require('mocha-finalize-each');
 
 module.exports = {
     setupSandbox(mochaContext, config) {
-        var sinonSandbox = sinon.sandbox.create(config);
+        var sinonSandbox = sinon.createSandbox(config);
         finalizeEach(mochaContext, testPromise => {
           return testPromise.then(() => {
             sinonSandbox.verify();
