@@ -5,7 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha",
-    "coverage": "npm test && nyc report --reporter=text-lcov > ./.nyc_output/lcov.info"
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 70,
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
   },
   "keywords": [
     "sinon",
@@ -23,6 +31,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
+    "coveralls": "^3.1.0",
     "mocha": "^5.2.0",
     "nyc": "^15.1.0",
     "sinon": "^5.1.1"
