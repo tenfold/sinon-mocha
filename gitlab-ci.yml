@@ -1,0 +1,35 @@
+stages:
+  - test
+  - coverage
+
+image: node:alpine
+
+test-job:
+  stage: test
+  script:
+    - npm install
+    - npm run test
+  artifacts:
+    paths: 
+      - node_modules
+      - coverage
+      - .nyc_output
+  tags:
+    - Tenfold
+  only:
+    - branches
+    - merge_requests
+    - tags
+
+coverage-job:
+  stage: coverage
+  script:
+    - npm run coverage
+  variables:
+    COVERALLS_REPO_TOKEN: $coveralls_token
+  tags:
+    - Tenfold
+  only:
+    - branches
+    - merge_requests
+    - tags
